@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(163, 119, 61);
+}
+
+#inputque{
+    width: 100%;
+    border: 1px solid rgb(226, 30, 30);
+}
+
+.App {
+    text-align: center;
+  }
+  .quediv{
+    background-color: cadetblue;
+  }
+  .submitbtn{
+    background-color: lightgreen;
+    margin-top: 20px;
+    font-weight: bold;
+    color:black;
+    padding: 10px 15px;
+  
+  }
+  .question-div{
+    margin: 0 auto;
+    background-color:#798383;
+    padding: 20px;
+    border-radius: 20px;
+   width: 80%;
+   
+  }
+  .options{
+    background-color: rgb(167, 117, 156);
+    margin: 0 auto;
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+    width:50%
+  }
+  .options1{
+    background-color: rgb(27, 122, 27);
+    color: white   ;
+    margin: 0 auto;
+    padding: 15px;
+    border: 5px solid white;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+    width:50%
+  }
+  .questionclr {
+    color: rgb(255, 170, 0);
+  }
+  .finalresult{
+    margin: 0 auto;
+    background-color: cadetblue;
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+  }
+
+  .img_div img{
+    width: 65%;
+    margin-top: 20px;
+  }
