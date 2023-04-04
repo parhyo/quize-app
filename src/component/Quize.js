@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar} from "react-bootstrap";
 import "./All.css";
+import { Link } from "react-router-dom";
 
 function Quize() {
   const [score, setScore] = useState(0);
@@ -22,9 +23,10 @@ function Quize() {
     }
     var answerdata = {};
     const que = getdata[currentQuestion];
-    console.log(alldata);
+    // console.log(alldata);
     answerdata = { ...alldata, [que.Questionid]: answerId.answer };
     localStorage.setItem("answer", JSON.stringify(answerdata));
+    
   };
   useEffect(() => {
     JSON.parse(localStorage.getItem("question"));
@@ -39,6 +41,7 @@ function Quize() {
     setFinalResult(true);
     
     var alldata = JSON.parse(localStorage.getItem("answer"));
+   
 
     for (const Questionid in alldata) {
       const abc = getdata.find((item) => item.Questionid == Questionid);
@@ -47,6 +50,10 @@ function Quize() {
       }
     }
   };
+
+  
+
+
   const optionClicked = (id) => {
     setAnswerId({
       ...answerId,
@@ -55,11 +62,10 @@ function Quize() {
     });
   };
 
-  useEffect(() => {
-    return () => {
-      localStorage.removeItem("answer");
-    };
-  }, []);
+
+  const preview=()=>{
+  
+  }
   return (
     <>
        <Navbar bg="dark" variant="dark">
@@ -80,7 +86,11 @@ function Quize() {
               {score} correct out of {getdata.length}
             </h2>
           </div>
-          <div className="w-50 mt-1 mx-auto"> </div>
+          <div className="w-50 mt-1 mx-auto">
+          <Link to='/result'>
+            <Button onClick={() => preview()} className="bg-success mt-3">Preview</Button>
+          </Link>
+           </div>
         </>
       ) : (
         <div className="question-div mt-1">
@@ -98,11 +108,11 @@ function Quize() {
                     <ul
                       className="list-unstyled"
                       key={index}
-                      onClick={() => optionClicked(ele.id)}
+                      onClick={() => optionClicked(ele.options)}
                     >
                       <li
                         className={
-                          ele.id === answerId?.answer ? "options1" : "options"
+                          ele.options === answerId?.answer ? "options1" : "options"
                         }
                       >
                         {ele.options}
