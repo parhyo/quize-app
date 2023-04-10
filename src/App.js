@@ -1,29 +1,21 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Home from './component/Home';
-import Quize from './component/Quize';
-import Result from './component/Result';
-// import Qustions from './component/Qustions';
-import Saval from './component/Saval';
+import "./App.css";
+import {BrowserRouter,Route, Routes} from 'react-router-dom';
+import Chatbox from "./Chatbox/Chatbox";
+import Mixer from "./components/Login/Mixer";
+
 
 function App() {
-  return (
-    <div className="App">
-      <div className='container'> 
 
-      <BrowserRouter>
-         <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/qustion"  element={<Saval/>}/>
-            <Route path="/result"  element={ <Result/>}/>
-            <Route path="/quize"  element={<Quize/>}/>
-         </Routes>
-      </BrowserRouter>
-      
-     
-      
-      </div>
-    </div>
+  return (
+    <>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Mixer/>} />
+        <Route path="/chatbox"  element={<Chatbox/>} />
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 

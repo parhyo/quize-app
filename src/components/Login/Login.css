@@ -1,0 +1,116 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 99%;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    right: 0;
+    position: fixed;
+    /* margin-right: 50px; */
+    /* left: 50%; */
+  }
+  
+  div {
+    /* width: 400px; */
+    margin: 0 auto;
+    padding: 1px;
+  }
+  
+
+  .imge{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 110%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+  }
+
+  .heading{
+    z-index: 1;
+  }
+
+
+  .login_page{
+    margin-right: 200px;
+    width: 50%;
+  }
+
+
+  .button_div{
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    border-radius: 15px;
+  }
+
+  .heading_oo{
+    position: absolute;
+    margin-right: 230%;
+    margin-bottom:60%;
+    width: 50%;
+    color: whitesmoke;
+  }
+
+  .imge_div{
+    position: relative;
+  }
+
+
+  .form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: rgb(8, 7, 7);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: gray;
+  }
+  
+  .form__field:focus {
+ 
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: primary;
+      font-weight: 700;
+    }
+  
+  /* reset input */
+  
+  /* demo */
+  body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+  }
+  
