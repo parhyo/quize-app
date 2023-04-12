@@ -63,7 +63,44 @@ body{
     width: 50%;
   }
 
+  .selected {
+  color: green;
+}
+
   .img_div img{
     width: 65%;
     margin-top: 20px;
+  }
+
+
+  .r_option{
+    background-color: #207B2F;
+    color: antiquewhite;
+  }
+
+  .s_option{
+    background-color:#4F508A;
+    color: antiquewhite;
+  }
+
+
+  .sk_option{
+    background-color: rgb(167, 117, 156);
+    color: antiquewhite;
+  }
+  /* #tabler{
+
+      border: 2px solid rgb(173, 27, 27);
+      border-radius: 15px;
+  } */
+
+
+  /* #parth{
+    width: 30%;
+    padding: 0px 300%;
+  } */
+
+  .sg_div{
+    display: flex;
+    align-items: flex-start;
   }
